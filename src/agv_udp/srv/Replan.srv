@@ -1,0 +1,4 @@
+bool replan
+uint32 robot_index
+---
+uint32 new_goal

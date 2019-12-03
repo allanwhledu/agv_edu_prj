@@ -1,0 +1,14 @@
+<launch>
+	<param name="initial_pose_x" value="-4.402"/>
+	<param name="initial_pose_y" value="1.547"/>
+	<param name="initial_pose_th" value="-2.42"/>
+
+	
+        <param name="target_pose_x" value="-5.389"/>
+	<param name="target_pose_y" value="0.757"/>
+	<param name="target_pose_th" value="-2.774"/>
+	
+        <node pkg="move_forward" name="move_and_avoid_dynamic_object" type="move_and_avoid_dynamic_object" output="screen">
+	</node>	
+
+</launch>

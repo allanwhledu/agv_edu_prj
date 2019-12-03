@@ -1,0 +1,17 @@
+<launch>
+  <arg name="robot_name"/>
+  <arg name="init_pose"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find agv_model)/agv.xacro'" />
+  <node pkg="gazebo_ros" type="spawn_model" name="spawn_robot" respawn="false" output="screen"
+    args="-param robot_description
+          -urdf   $(arg init_pose)
+          -model $(arg robot_name)">
+  </node>
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="100.0" />
+  </node>
+
+
+</launch>

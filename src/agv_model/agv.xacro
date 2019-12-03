@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<robot   name="turtlebot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<xacro:include filename="$(find agv_model)/agv.gazebo" />
+<xacro:include filename="$(find agv_model)/materials.xacro"  />
+     <!-- Base Link -->
+  <link  name="base_link">
+    <inertial>
+      <origin xyz="0 0 0.3" rpy="0 0 0"/>
+      <mass value="2"/>
+      <inertia
+	  ixx="2" ixy="0" ixz="0"
+	  iyy="2" iyz="0"
+	  izz="2"/>
+    </inertial>
+
+    <collision  name="base_collision">
+      <origin xyz="0 0 0.3" rpy="0 0 0"/>
+      <geometry>
+	<cylinder radius="0.3" length="0.6"/>
+      </geometry>
+    </collision>
+
+    <visual  name="base_visual">
+      <origin xyz="0 0 0.3" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://agv_model/meshes/agv.dae"/>
+      </geometry>
+    </visual>
+  </link>
+
+ 
+  <joint name="hokuyo_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0 0 0.65" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="hokuyo_link"/>
+  </joint>
+
+  <link name="hokuyo_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://agv_model/meshes/hokuyo.dae"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <mass value="1e-6" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+
+<!--
+  <joint name="virtual_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0 0 0.25" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="laser"/>
+  </joint>
+
+  <link name="laser">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="1e-6" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+
+-->
+
+
+
+
+</robot>
