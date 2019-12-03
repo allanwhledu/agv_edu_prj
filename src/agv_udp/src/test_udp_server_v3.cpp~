@@ -1,0 +1,10 @@
+#include "udp_server_v3.h"
+
+int main(int argc, char** argv)
+{
+ros::init(argc, argv, "udp_server_v3");
+ros::NodeHandle node;
+UdpServer server(node, 7838, 1);
+server.execute();
+return 0;
+}

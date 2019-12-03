@@ -94,32 +94,32 @@ target_link_libraries(test_udp_move_robot_2
 
 
 
-add_executable(test_rev_path_point_move src/test_rev_path_point_move.cpp  src/receive_path_point_move.cpp)
+##add_executable(test_rev_path_point_move src/test_rev_path_point_move.cpp  src/receive_path_point_move.cpp)
 
-target_link_libraries(test_rev_path_point_move
-  ${catkin_LIBRARIES})
-
-
-
-add_executable(test_simulation_server src/test_simulation_server.cpp  src/simulation_server.cpp)
-
-target_link_libraries(test_simulation_server
-  ${catkin_LIBRARIES})
+##target_link_libraries(test_rev_path_point_move
+##  ${catkin_LIBRARIES})
 
 
-add_executable(test_distributed_reserve_area src/test_distributed_reserve_area.cpp  src/distributed_reserve_area.cpp  src/Astar.cpp)
 
-target_link_libraries(test_distributed_reserve_area
-  ${catkin_LIBRARIES})
+##add_executable(test_simulation_server src/test_simulation_server.cpp  src/simulation_server.cpp)
+
+##target_link_libraries(test_simulation_server
+##  ${catkin_LIBRARIES})
 
 
-add_executable(center_control src/center_control.cpp)
+##add_executable(test_distributed_reserve_area src/test_distributed_reserve_area.cpp  src/distributed_reserve_area.cpp  src/Astar.cpp)
 
-target_link_libraries(center_control
-  ${catkin_LIBRARIES})
+##target_link_libraries(test_distributed_reserve_area
+##  ${catkin_LIBRARIES})
 
-add_executable(replan_server src/replan_server.cpp)
 
-target_link_libraries(replan_server
-  ${catkin_LIBRARIES})
+##add_executable(center_control src/center_control.cpp)
+
+##target_link_libraries(center_control
+##  ${catkin_LIBRARIES})
+
+##add_executable(replan_server src/replan_server.cpp)
+
+##target_link_libraries(replan_server
+##  ${catkin_LIBRARIES})
 

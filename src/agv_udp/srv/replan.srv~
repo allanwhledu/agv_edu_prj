@@ -1,0 +1,3 @@
+bool replan
+---
+uint32 new_goal
