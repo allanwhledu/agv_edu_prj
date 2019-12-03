@@ -1,0 +1,162 @@
+#include "ros/ros.h"
+
+
+geometry_msgs::Point cur, goal;
+geometry_msgs::Point point[9];
+point[0].x = -4.402;
+point[0].y = 1.547;
+point[0].z = -2.42;
+
+point[1].x = -5.644;
+point[1].y = 0.563;
+point[1].z = -2.572;
+
+point[2].x = -6.436;
+point[2].y = 0.435;
+point[2].z = -3.012;
+
+point[3].x = -8.002;
+point[3].y = 0.240;
+point[3].z = -3.005;
+
+point[4].x = -7.94;
+point[4].y = -0.764;//zhong zhuan dian 
+point[4].z = -3.012;
+
+point[5].x = -9.328;
+point[5].y = -0.045;
+point[5].z = -3.079;
+
+point[6].x = -10.575;
+point[6].y = -0.075;
+point[6].z = -2.665;
+
+point[7].x = -11.405;
+point[7].y = -0.529;
+point[7].z = -2.509;
+
+point[8].x = -12.564;
+point[8].y = -1.515;
+point[8].z = 0.51;
+
+
+void pose_cb(const geometry_msgs::Point::ConstPtr&  p)
+{
+	cur = *p;
+}
+int main(int argc, char** argv)
+{
+	ros::init(argc, argv, "udp_move");
+	ros::NodeHandle node;
+	ros::Publisher cmd_vel = node.advertise<geometry_msgs::Twist>("/robot1/cmd_vel", 100);
+	ros::Subscriber pos_sub = node.subscribe("/robot1/robot_pos", 1, pose_cb);
+	vector<int> path_index = {0, 1, 2, 3, 5, 6, 7, 8};
+	bool path_insert = {false, false, false, false, false, false, false, false};
+	vector<geometry_msgs::Point> path;
+	int count = 0;
+	while(ros::ok())
+	{
+		geometry_msgs::Point pursuit_point = point[path_index[count]];
+		if(hypot(fabs(temp_point.x - cur.x), fabs(temp_point.y - cur.y) < 0.2)  //very near
+		{
+			path_insert[count] = true;
+			if(count < path_index.size() - 1)
+			{
+				count++;
+				continue;
+			}
+		}
+		ros::spinOnce();
+		if(!path_insert[count])
+		{
+			//insert point 
+			geometry_msgs::Point first_point, second_point;
+			if(count == 0)  //initial
+			{
+				first_point = cur;
+				second_point = point[path_index[count]];
+			}
+			else
+			{
+				first_point = point[path_index[count-1]];
+				second_point = point[path_index[count]];
+			}
+
+			for(int i=0; i<10;i++)
+			{
+				geometry_msgs::Point temp_insert_point;
+				temp_insert_point.x = (second_point.x - first_point.x)/10 + first_point.x;
+				temp_insert_point.y = (second_point.y - first_point.y)/10 + first_point.y;
+				temp_insert_point.z = atan2(second_point.y - first_point.y, second_point.x - first_point.x);
+				path.push_back(temp_insert_point);
+			}
+			//add the goal point in the path
+			if(count == path_index.size()-1)
+			{
+				path.push_back(point[count]);
+			}
+		}
+		
+		//find the nearest point in the point
+		int nearest_point_index;
+		double nearest_dist = 10000;
+		for(int i=0; i<path.size(); i++)
+		{
+			if(hypot(fabs(path[i].x - cur.x), fabs(path[i].y - cur.y))  < nearest_dist)
+			{
+				nearest_point_index = i;
+				nearest_dist = hypot(fabs(path[i].x - cur.x), fabs(path[i].y - cur.y));
+			}
+		}
+
+		//get the following point
+		geometry_msgs::Point nearest_point;
+		if(nearest_point_index + 5 < path.size())
+		{
+			nearest_point = path[nearest_point_index + 10];
+		}
+		else
+		{
+			nearest_point = path.back();
+		}
+
+		//calculate the velocity
+		double v_x, v_y, v_a;  //velocity
+		double e_x, e_y, e_a;  //error in dist
+		e_x = nearest_point.x - cur.x;
+		e_y = nearest_point.y - cur.y;
+		e_a = nearest_point.z - cur.z;
+
+		if(hypot(fabs(e_x), fabs(e_y)) < 0.1)
+		{
+			v_x = hypot(fabs(e_x), fabs(e_y));
+		}
+		else
+		{
+			v_x = 0.1;
+		}
+
+		if(fabs(e_a) < 0.5)
+		{
+			v_a = e_a;
+		}
+		else
+		{
+			v_a = 0.5*v_a/fabs(v_a);
+		}
+		if(fabs(v_a) > 0.1 && v_x > 0.02)
+		{
+			v_x = 0;
+		}
+
+		geometry_msgs::Twist velocity;
+		velocity.linear.x = v_x;
+		velocity.linear.y = 0;
+		velocity.angular.z = v_a;
+		cmd_vel.publish(velocity);
+
+	}
+
+	return 0;
+
+}

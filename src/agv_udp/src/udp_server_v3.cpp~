@@ -1,0 +1,238 @@
+#include "udp_server_v3.h"
+
+UdpServer::UdpServer(ros::NodeHandle &nh, uint16_t server_port, int robot_id_)
+{
+	//ros initial
+	robot_id =robot_id_;
+	std::stringstream pos_topic, vel_topic, col_topic;
+	pos_topic<<"/robot"<<robot_id<<"/robot_pos";
+	pos_pub = nh.advertise<geometry_msgs::Point>(pos_topic.str(), 100);
+
+	col_topic<<"/robot"<<robot_id<<"/col_dis";
+	col_pub = nh.advertise<sensor_msgs::LaserScan>(col_topic.str(), 100);
+
+	vel_topic<<"/robot"<<robot_id<<"/cmd_vel";
+	carVelSub = nh.subscribe(vel_topic.str(),1,&UdpServer::carVelCallback,this);
+	ACCEPTTIME = 500000000;
+	zeroCount = 0;
+    lastvx = 0;
+    lastvy = 0;
+    lastva = 0;
+    COMMAND_SIZE = 11;
+    MAXZERONUM = 5;
+
+	//udp initial
+	f_read = boost::bind(&UdpServer::receive_data, this);
+	rec_data_flag = false;
+	sock_fd = socket(AF_INET, SOCK_DGRAM, 0);
+	if(sock_fd < 0)
+	{
+	  perror("socket");
+	  exit(1);
+	}
+
+	memset(&addr_serv, 0, sizeof(struct sockaddr_in));
+	addr_serv.sin_family = AF_INET;
+	addr_serv.sin_port = htons(server_port);
+	addr_serv.sin_addr.s_addr = htonl(INADDR_ANY);
+	len = sizeof(addr_serv);
+
+	if(bind(sock_fd, (struct sockaddr *)&addr_serv, sizeof(addr_serv)) < 0)
+	{
+	  perror("bind error:");
+	  exit(1);
+	}
+
+}
+
+
+UdpServer::~UdpServer()
+{
+
+}
+
+void UdpServer::carVelCallback(const geometry_msgs::Twist::ConstPtr& msg)
+{
+	carVel = msg;
+	carVelTime = ros::Time::now();
+}
+
+void UdpServer::getCarVel(geometry_msgs::Twist& velocity)
+{
+	ros::Time nowTime = ros::Time::now();
+	ros::Duration timediff = nowTime-carVelTime;
+	if(carVel && timediff.nsec<ACCEPTTIME && timediff.sec==0 )
+	{
+		velocity = *carVel;
+	}
+	else
+	{
+		geometry_msgs::Twist dummyZero;
+		velocity = dummyZero;
+	}
+
+}
+
+void UdpServer::velFilter(short &vx, short &vy, short &va, int &count, short &lastvx, short &lastvy, short &lastva)
+{
+	if(vx==0 && vy==0 && va==0)
+	{
+		count++;
+		if(count>MAXZERONUM)
+		{
+			count = MAXZERONUM;
+		}
+		else
+		{
+			vx = lastvx;
+			vy = lastvy;
+			va = lastva;
+			ROS_INFO("*****FILT OUT********");
+		}
+	}
+	else
+	{
+		count = 0;
+		lastvx = vx;
+		lastvy = vy;
+		lastva = va;
+	}
+
+}
+
+void UdpServer::genCmd(char* cmdData, short vx, short vy, short va)
+{
+	void* tempP1 = &vx;
+	void* tempP2 = &vy;
+	void* tempP3 = &va;
+	char* velxChar = (char*)tempP1;
+	char* velyChar = (char*)tempP2;
+	char* velaChar = (char*)tempP3;
+
+	cmdData[0] = (char)0x53;
+	cmdData[1] = (char)0x4A;
+	cmdData[2] = (char)0x54;
+	cmdData[3] = (char)0x55;
+	cmdData[4] = velxChar[1]; //swap the high byte and the low byte
+	cmdData[5] = velxChar[0];
+	cmdData[6] = velyChar[1];
+	cmdData[7] = velyChar[0];
+	cmdData[8] = velaChar[1];
+	cmdData[9] = velaChar[0];
+	cmdData[10] = (char)0x01; //
+
+}
+
+
+void UdpServer::receive_data()
+{
+
+	int temp_count = 0;
+	while(1)
+	{
+		//receive information from the client
+		recv_num = recvfrom(sock_fd, recv_buf, sizeof(recv_buf), 0, (struct sockaddr *)&addr_client, (socklen_t *)&len);
+	    if(recv_num < 0)
+	    {
+	      perror("recvfrom error:");
+	      exit(1);
+	    }	
+
+
+		int t_x, t_y, t_theta;
+		int f_c, b_c, l_c, r_c;
+		int min_f, min_b, min_l, min_r;
+        // std::sscanf(recv_buf, "x:%lf y:%lf theta:%lf front:%d %lf back:%d %lf left:%d %lf right:%d %lf", &t_x, &t_y, &t_theta,
+        // 	&f_c, &min_f, &b_c, &min_b,&l_c, &min_l,&r_c, &min_r);
+        std::sscanf(recv_buf, "%d %d %d %d %d %d %d %d %d %d %d", &t_x, &t_y, &t_theta,
+        	&f_c, &min_f, &b_c, &min_b,&l_c, &min_l,&r_c, &min_r);
+        recv_buf[recv_num] = '\0';
+        if(temp_count%10000 > 9998)
+        {
+        	printf("From ROBOT%d :server receive %d bytes: %s\n\n",robot_id, recv_num, recv_buf);
+        	std::cout<<t_x<<" "<<t_y<<" "<<t_theta<<" "<<min_f<<" "<<min_b<<" "<<min_l<<" "<<min_r<<std::endl;
+        }
+        // std::cout<<t_x<<" "<<t_y<<" "<<t_theta<<" "<<min_f<<" "<<min_b<<" "<<min_l<<" "<<min_r<<std::endl;
+        printf("From ROBOT%d :server receive %d bytes: %s\n\n",robot_id, recv_num, recv_buf);
+        geometry_msgs::Point robot_pos;
+        robot_pos.x = t_x/1000.0;
+        robot_pos.y = t_y/1000.0;
+        robot_pos.z = t_theta/1000.0;
+
+        sensor_msgs::LaserScan  col_dis;
+        col_dis.header.stamp = ros::Time::now();
+        col_dis.intensities.push_back(f_c);//the direction  front back left right
+        col_dis.intensities.push_back(b_c);//the direction  front back left right
+        col_dis.intensities.push_back(l_c);//the direction  front back left right
+        col_dis.intensities.push_back(r_c);//the direction  front back left right
+        col_dis.ranges.push_back(min_f/1000.0);     //the distance
+        col_dis.ranges.push_back(min_b/1000.0);     //the distance
+        col_dis.ranges.push_back(min_l/1000.0);     //the distance
+        col_dis.ranges.push_back(min_r/1000.0);     //the distance
+
+        col_pub.publish(col_dis);
+
+        pos_pub.publish(robot_pos);
+
+        //publish tf
+
+        static tf::TransformBroadcaster br;
+        tf::Transform transform;
+        transform.setOrigin( tf::Vector3(t_x, t_y, 0.0) );
+        tf::Quaternion q;
+        q.setRPY(0, 0, t_theta);
+        transform.setRotation(q);
+        br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "/map", "/base_link"));
+        
+        rec_data_flag = true;
+        //ros::Duration(0.1).sleep();//sleep(0.1);
+        //std::cout<<"rev"<<std::endl;
+        temp_count++;
+        if(temp_count > 1000000)
+        	temp_count = 0;
+        //std::cout<<temp_count<<std::endl;
+	}
+
+}
+
+ 
+void UdpServer::execute()
+{
+	boost::thread rec_data_thrd(f_read);
+	rec_data_thrd.detach();
+	ros::Rate rate(10);
+	while(ros::ok())
+	{
+		//rate.sleep();
+		ros::spinOnce();
+		geometry_msgs::Twist velocity;
+		getCarVel(velocity);
+		velx = velocity.linear.x;
+		vely = velocity.linear.y;
+		vela = velocity.angular.z;
+		vx = (int)(velx*1000.0);
+		vy = (int)(vely*1000.0);
+		va = (int)(vela*1000.0);
+		velFilter(vx,vy,va,zeroCount,lastvx,lastvy,lastva);
+		genCmd(send_buf,vx,vy,va);
+		if(rec_data_flag)
+		{
+			send_num = sendto(sock_fd, send_buf, COMMAND_SIZE, 0, (struct sockaddr *)&addr_client, len);
+			//printf("send_buf:%s \n", send_buf);
+	        if(send_num < 0)
+		    {
+		      perror("sendto error:");
+		      exit(1);
+		    }
+		}
+
+	}
+
+	//close(sock_fd);
+
+}
+
+boost::thread UdpServer::thread_exe()
+{
+	return boost::thread(&UdpServer::execute, this);
+}
