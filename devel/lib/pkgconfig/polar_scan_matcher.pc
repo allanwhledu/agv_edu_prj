@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/devel
+
+Name: polar_scan_matcher
+Description: Description of polar_scan_matcher
+Version: 0.3.2
+Cflags: -I/home/sjtuwhl/ROBOTLAB_WS/src/scan_tools-indigo/polar_scan_matcher/include
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/devel/lib -lpolar_scan_matcher
+Requires: 

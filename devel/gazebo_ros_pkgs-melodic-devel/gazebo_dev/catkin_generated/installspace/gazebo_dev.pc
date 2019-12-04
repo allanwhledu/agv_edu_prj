@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: gazebo_dev
+Description: Description of gazebo_dev
+Version: 2.8.5
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

@@ -1,0 +1,550 @@
+/home/sjtuwhl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX:PATH=/home/sjtuwhl/ROBOTLAB_WS/devel -G "CodeBlocks - Unix Makefiles" /home/sjtuwhl/ROBOTLAB_WS/src
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Using CATKIN_DEVEL_PREFIX: /home/sjtuwhl/ROBOTLAB_WS/devel
+-- Using CMAKE_PREFIX_PATH: /home/sjtuwhl/ROBOTLAB_WS/devel;/opt/ros/melodic
+-- This workspace overlays: /home/sjtuwhl/ROBOTLAB_WS/devel;/opt/ros/melodic
+-- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.15", minimum required is "2") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python2
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/sjtuwhl/ROBOTLAB_WS/devel/test_results
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python2 (found version "2.7.15") 
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.19
+-- BUILD_SHARED_LIBS is on
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 48 packages in topological order:
+-- ~~  - gazebo_dev
+-- ~~  - gazebo_ros_pkgs (metapackage)
+-- ~~  - move_forward
+-- ~~  - ros_control (metapackage)
+-- ~~  - rqt_controller_manager
+-- ~~  - scan_tools (metapackage)
+-- ~~  - controller_manager_msgs
+-- ~~  - turtlebot3 (metapackage)
+-- ~~  - turtlebot3_msgs
+-- ~~  - turtlebot3_navigation
+-- ~~  - turtlebot3_simulations (metapackage)
+-- ~~  - urg_c
+-- ~~  - agv_tcp_velocity
+-- ~~  - hardware_interface
+-- ~~  - combined_robot_hw
+-- ~~  - controller_interface
+-- ~~  - controller_manager
+-- ~~  - soccer_maxon
+-- ~~  - agv_udp
+-- ~~  - controller_manager_tests
+-- ~~  - combined_robot_hw_tests
+-- ~~  - gazebo_msgs
+-- ~~  - laser_proc
+-- ~~  - laser_scan_sparsifier
+-- ~~  - laser_scan_splitter
+-- ~~  - gazebo_ros
+-- ~~  - handle_reflector
+-- ~~  - ncd_parser
+-- ~~  - ira_laser_tools
+-- ~~  - laser_ortho_projector
+-- ~~  - laser_scan_matcher
+-- ~~  - polar_scan_matcher
+-- ~~  - scan_to_cloud_converter
+-- ~~  - test_tf
+-- ~~  - transmission_interface
+-- ~~  - turtlebot3_bringup
+-- ~~  - turtlebot3_example
+-- ~~  - turtlebot3_fake
+-- ~~  - turtlebot3_gazebo
+-- ~~  - turtlebot3_slam
+-- ~~  - turtlebot3_teleop
+-- ~~  - gazebo_plugins
+-- ~~  - joint_limits_interface
+-- ~~  - gazebo_ros_control
+-- ~~  - urg_node
+-- ~~  - nav_car
+-- ~~  - mrobot_gazebo
+-- ~~  - turtlebot3_description
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'gazebo_dev'
+-- ==> add_subdirectory(gazebo_ros_pkgs-melodic-devel/gazebo_dev)
+-- +++ processing catkin metapackage: 'gazebo_ros_pkgs'
+-- ==> add_subdirectory(gazebo_ros_pkgs-melodic-devel/gazebo_ros_pkgs)
+-- +++ processing catkin package: 'move_forward'
+-- ==> add_subdirectory(move_forward)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- move_forward: 0 messages, 1 services
+-- +++ processing catkin metapackage: 'ros_control'
+-- ==> add_subdirectory(ros_control-melodic-devel/ros_control)
+-- +++ processing catkin package: 'rqt_controller_manager'
+-- ==> add_subdirectory(ros_control-melodic-devel/rqt_controller_manager)
+-- +++ processing catkin metapackage: 'scan_tools'
+-- ==> add_subdirectory(scan_tools-indigo/scan_tools)
+-- +++ processing catkin package: 'controller_manager_msgs'
+-- ==> add_subdirectory(ros_control-melodic-devel/controller_manager_msgs)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- controller_manager_msgs: 4 messages, 6 services
+-- +++ processing catkin metapackage: 'turtlebot3'
+-- ==> add_subdirectory(turtlebot3-melodic-devel/turtlebot3)
+-- +++ processing catkin package: 'turtlebot3_msgs'
+-- ==> add_subdirectory(turtlebot3_msgs-melodic-devel)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- turtlebot3_msgs: 3 messages, 0 services
+-- +++ processing catkin package: 'turtlebot3_navigation'
+-- ==> add_subdirectory(turtlebot3-melodic-devel/turtlebot3_navigation)
+-- +++ processing catkin metapackage: 'turtlebot3_simulations'
+-- ==> add_subdirectory(turtlebot3_simulations-melodic-devel/turtlebot3_simulations)
+-- +++ processing catkin package: 'urg_c'
+-- ==> add_subdirectory(urg_c-master)
+-- +++ processing catkin package: 'agv_tcp_velocity'
+-- ==> add_subdirectory(agv_tcp_velocity)
+-- +++ processing catkin package: 'hardware_interface'
+-- ==> add_subdirectory(ros_control-melodic-devel/hardware_interface)
+-- +++ processing catkin package: 'combined_robot_hw'
+-- ==> add_subdirectory(ros_control-melodic-devel/combined_robot_hw)
+-- +++ processing catkin package: 'controller_interface'
+-- ==> add_subdirectory(ros_control-melodic-devel/controller_interface)
+-- +++ processing catkin package: 'controller_manager'
+-- ==> add_subdirectory(ros_control-melodic-devel/controller_manager)
+-- +++ processing catkin package: 'soccer_maxon'
+-- ==> add_subdirectory(soccer_maxon)
+-- Found Boost: /usr/include (found version "1.65.1") found components:  system 
+-- +++ processing catkin package: 'agv_udp'
+-- ==> add_subdirectory(agv_udp)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- agv_udp: 2 messages, 1 services
+-- +++ processing catkin package: 'controller_manager_tests'
+-- ==> add_subdirectory(ros_control-melodic-devel/controller_manager_tests)
+-- +++ processing catkin package: 'combined_robot_hw_tests'
+-- ==> add_subdirectory(ros_control-melodic-devel/combined_robot_hw_tests)
+-- +++ processing catkin package: 'gazebo_msgs'
+-- ==> add_subdirectory(gazebo_ros_pkgs-melodic-devel/gazebo_msgs)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- gazebo_msgs: 9 messages, 23 services
+-- +++ processing catkin package: 'laser_proc'
+-- ==> add_subdirectory(laser_proc-melodic-devel)
+-- +++ processing catkin package: 'laser_scan_sparsifier'
+-- ==> add_subdirectory(scan_tools-indigo/laser_scan_sparsifier)
+-- +++ processing catkin package: 'laser_scan_splitter'
+-- ==> add_subdirectory(scan_tools-indigo/laser_scan_splitter)
+-- +++ processing catkin package: 'gazebo_ros'
+-- ==> add_subdirectory(gazebo_ros_pkgs-melodic-devel/gazebo_ros)
+-- Found Boost: /usr/include (found suitable version "1.65.1", minimum required is "1.40.0") found components:  thread signals system filesystem program_options regex iostreams date_time chrono atomic 
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.0.0") 
+-- Found Boost: /usr/include (found version "1.65.1")  
+-- Looking for OGRE...
+-- Found Ogre Ghadamon (1.9.0)
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.0.0", minimum required is "2.3.0") 
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq , version 4.2.5
+-- Checking for module 'uuid'
+--   Found uuid, version 2.31.1
+-- Found UUID: TRUE  
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 6.0.0
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- FreeImage.pc not found, we will search for FreeImage_INCLUDE_DIRS and FreeImage_LIBRARIES
+-- Found UUID: TRUE  
+-- Checking for module 'gts'
+--   Found gts, version 0.7.6
+-- Checking for module 'libswscale'
+--   Found libswscale, version 4.8.100
+-- Checking for module 'libavdevice >= 56.4.100'
+--   Found libavdevice , version 57.10.100
+-- Checking for module 'libavformat'
+--   Found libavformat, version 57.83.100
+-- Checking for module 'libavcodec'
+--   Found libavcodec, version 57.107.100
+-- Checking for module 'libavutil'
+--   Found libavutil, version 55.78.100
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.7.4
+-- Checking for module 'yaml-0.1'
+--   Found yaml-0.1, version 0.1.7
+-- Checking for module 'libzip'
+--   Found libzip, version 1.1.2
+-- Gazebo version: 9.0
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Found Boost: /usr/include (found version "1.65.1") found components:  thread chrono system date_time atomic 
+-- +++ processing catkin package: 'handle_reflector'
+-- ==> add_subdirectory(handle_reflector)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'ncd_parser'
+-- ==> add_subdirectory(scan_tools-indigo/ncd_parser)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'ira_laser_tools'
+-- ==> add_subdirectory(ira_laser_tools-master)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Found Boost: /usr/include (found suitable version "1.65.1", minimum required is "1.40.0") found components:  system filesystem thread date_time iostreams serialization chrono atomic regex 
+-- Checking for module 'libopenni2'
+--   Found libopenni2, version 2.2.0.3
+-- Could NOT find ensenso (missing: ENSENSO_LIBRARY ENSENSO_INCLUDE_DIR) 
+** WARNING ** io features related to ensenso will be disabled
+-- Could NOT find DAVIDSDK (missing: DAVIDSDK_LIBRARY DAVIDSDK_INCLUDE_DIR) 
+** WARNING ** io features related to davidSDK will be disabled
+-- Could NOT find DSSDK (missing: _DSSDK_LIBRARIES) 
+** WARNING ** io features related to dssdk will be disabled
+** WARNING ** io features related to pcap will be disabled
+** WARNING ** io features related to png will be disabled
+-- The imported target "vtkRenderingPythonTkWidgets" references the file
+   "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-6.3/VTKTargets.cmake"
+but not all the files it references.
+
+-- The imported target "vtk" references the file
+   "/usr/bin/vtk"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-6.3/VTKTargets.cmake"
+but not all the files it references.
+
+** WARNING ** io features related to libusb-1.0 will be disabled
+-- Could NOT find ensenso (missing: ENSENSO_LIBRARY ENSENSO_INCLUDE_DIR) 
+** WARNING ** visualization features related to ensenso will be disabled
+-- Could NOT find DAVIDSDK (missing: DAVIDSDK_LIBRARY DAVIDSDK_INCLUDE_DIR) 
+** WARNING ** visualization features related to davidSDK will be disabled
+-- Could NOT find DSSDK (missing: _DSSDK_LIBRARIES) 
+** WARNING ** visualization features related to dssdk will be disabled
+-- Could NOT find RSSDK (missing: _RSSDK_LIBRARIES) 
+** WARNING ** visualization features related to rssdk will be disabled
+-- looking for PCL_COMMON
+-- looking for PCL_OCTREE
+-- looking for PCL_IO
+-- looking for PCL_KDTREE
+-- looking for PCL_SEARCH
+-- looking for PCL_SAMPLE_CONSENSUS
+-- looking for PCL_FILTERS
+-- looking for PCL_2D
+-- looking for PCL_GEOMETRY
+-- looking for PCL_FEATURES
+-- looking for PCL_ML
+-- looking for PCL_SEGMENTATION
+-- looking for PCL_VISUALIZATION
+-- looking for PCL_SURFACE
+-- looking for PCL_REGISTRATION
+-- looking for PCL_KEYPOINTS
+-- looking for PCL_TRACKING
+-- looking for PCL_RECOGNITION
+-- looking for PCL_STEREO
+-- looking for PCL_APPS
+-- looking for PCL_IN_HAND_SCANNER
+-- looking for PCL_MODELER
+-- looking for PCL_POINT_CLOUD_EDITOR
+-- looking for PCL_OUTOFCORE
+-- looking for PCL_PEOPLE
+-- +++ processing catkin package: 'laser_ortho_projector'
+-- ==> add_subdirectory(scan_tools-indigo/laser_ortho_projector)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- The imported target "vtkRenderingPythonTkWidgets" references the file
+   "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-6.3/VTKTargets.cmake"
+but not all the files it references.
+
+-- The imported target "vtk" references the file
+   "/usr/bin/vtk"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-6.3/VTKTargets.cmake"
+but not all the files it references.
+
+-- +++ processing catkin package: 'laser_scan_matcher'
+-- ==> add_subdirectory(scan_tools-indigo/laser_scan_matcher)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- The imported target "vtkRenderingPythonTkWidgets" references the file
+   "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-6.3/VTKTargets.cmake"
+but not all the files it references.
+
+-- The imported target "vtk" references the file
+   "/usr/bin/vtk"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-6.3/VTKTargets.cmake"
+but not all the files it references.
+
+-- +++ processing catkin package: 'polar_scan_matcher'
+-- ==> add_subdirectory(scan_tools-indigo/polar_scan_matcher)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'scan_to_cloud_converter'
+-- ==> add_subdirectory(scan_tools-indigo/scan_to_cloud_converter)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- The imported target "vtkRenderingPythonTkWidgets" references the file
+   "/usr/lib/x86_64-linux-gnu/libvtkRenderingPythonTkWidgets.so"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-6.3/VTKTargets.cmake"
+but not all the files it references.
+
+-- The imported target "vtk" references the file
+   "/usr/bin/vtk"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/cmake/vtk-6.3/VTKTargets.cmake"
+but not all the files it references.
+
+-- +++ processing catkin package: 'test_tf'
+-- ==> add_subdirectory(test_tf)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'transmission_interface'
+-- ==> add_subdirectory(ros_control-melodic-devel/transmission_interface)
+-- Found Boost: /usr/include (found version "1.65.1") found components:  system thread chrono date_time atomic 
+-- +++ processing catkin package: 'turtlebot3_bringup'
+-- ==> add_subdirectory(turtlebot3-melodic-devel/turtlebot3_bringup)
+-- +++ processing catkin package: 'turtlebot3_example'
+-- ==> add_subdirectory(turtlebot3-melodic-devel/turtlebot3_example)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Generating .msg files for action turtlebot3_example/Turtlebot3 /home/sjtuwhl/ROBOTLAB_WS/src/turtlebot3-melodic-devel/turtlebot3_example/action/Turtlebot3.action
+-- turtlebot3_example: 7 messages, 0 services
+-- +++ processing catkin package: 'turtlebot3_fake'
+-- ==> add_subdirectory(turtlebot3_simulations-melodic-devel/turtlebot3_fake)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'turtlebot3_gazebo'
+-- ==> add_subdirectory(turtlebot3_simulations-melodic-devel/turtlebot3_gazebo)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Found Boost: /usr/include (found suitable version "1.65.1", minimum required is "1.40.0") found components:  thread signals system filesystem program_options regex iostreams date_time chrono atomic 
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.0.0") 
+-- Found Boost: /usr/include (found version "1.65.1")  
+-- Looking for OGRE...
+-- Found Ogre Ghadamon (1.9.0)
+CMake Warning (dev) at /home/sjtuwhl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/bin/cmake/linux/share/cmake-3.15/Modules/FindBoost.cmake:1270 (if):
+  Policy CMP0054 is not set: Only interpret if() arguments as variables or
+  keywords when unquoted.  Run "cmake --help-policy CMP0054" for policy
+  details.  Use the cmake_policy command to set the policy and suppress this
+  warning.
+
+  Quoted variables like "chrono" will no longer be dereferenced when the
+  policy is set to NEW.  Since the policy is not set the OLD behavior will be
+  used.
+Call Stack (most recent call first):
+  /home/sjtuwhl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/bin/cmake/linux/share/cmake-3.15/Modules/FindBoost.cmake:1904 (_Boost_MISSING_DEPENDENCIES)
+  /usr/share/OGRE/cmake/modules/FindOGRE.cmake:318 (find_package)
+  /usr/lib/x86_64-linux-gnu/cmake/gazebo/gazebo-config.cmake:175 (find_package)
+  turtlebot3_simulations-melodic-devel/turtlebot3_gazebo/CMakeLists.txt:23 (find_package)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.0.0", minimum required is "2.3.0") 
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq , version 4.2.5
+-- Checking for module 'uuid'
+--   Found uuid, version 2.31.1
+-- Found UUID: TRUE  
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 6.0.0
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- FreeImage.pc not found, we will search for FreeImage_INCLUDE_DIRS and FreeImage_LIBRARIES
+-- Found UUID: TRUE  
+-- Checking for module 'gts'
+--   Found gts, version 0.7.6
+-- Checking for module 'libswscale'
+--   Found libswscale, version 4.8.100
+-- Checking for module 'libavdevice >= 56.4.100'
+--   Found libavdevice , version 57.10.100
+-- Checking for module 'libavformat'
+--   Found libavformat, version 57.83.100
+-- Checking for module 'libavcodec'
+--   Found libavcodec, version 57.107.100
+-- Checking for module 'libavutil'
+--   Found libavutil, version 55.78.100
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.7.4
+-- Checking for module 'yaml-0.1'
+--   Found yaml-0.1, version 0.1.7
+-- Checking for module 'libzip'
+--   Found libzip, version 1.1.2
+CMake Warning at /opt/ros/melodic/share/catkin/cmake/catkin_package.cmake:166 (message):
+  catkin_package() DEPENDS on 'gazebo' but neither 'gazebo_INCLUDE_DIRS' nor
+  'gazebo_LIBRARIES' is defined.
+Call Stack (most recent call first):
+  /opt/ros/melodic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
+  turtlebot3_simulations-melodic-devel/turtlebot3_gazebo/CMakeLists.txt:40 (catkin_package)
+
+
+-- +++ processing catkin package: 'turtlebot3_slam'
+-- ==> add_subdirectory(turtlebot3-melodic-devel/turtlebot3_slam)
+-- +++ processing catkin package: 'turtlebot3_teleop'
+-- ==> add_subdirectory(turtlebot3-melodic-devel/turtlebot3_teleop)
+-- +++ processing catkin package: 'gazebo_plugins'
+-- ==> add_subdirectory(gazebo_ros_pkgs-melodic-devel/gazebo_plugins)
+-- Found Boost: /usr/include (found suitable version "1.65.1", minimum required is "1.40.0") found components:  thread signals system filesystem program_options regex iostreams date_time chrono atomic 
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.0.0") 
+-- Found Boost: /usr/include (found version "1.65.1")  
+-- Looking for OGRE...
+-- Found Ogre Ghadamon (1.9.0)
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.0.0", minimum required is "2.3.0") 
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq , version 4.2.5
+-- Checking for module 'uuid'
+--   Found uuid, version 2.31.1
+-- Found UUID: TRUE  
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 6.0.0
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- FreeImage.pc not found, we will search for FreeImage_INCLUDE_DIRS and FreeImage_LIBRARIES
+-- Found UUID: TRUE  
+-- Checking for module 'gts'
+--   Found gts, version 0.7.6
+-- Checking for module 'libswscale'
+--   Found libswscale, version 4.8.100
+-- Checking for module 'libavdevice >= 56.4.100'
+--   Found libavdevice , version 57.10.100
+-- Checking for module 'libavformat'
+--   Found libavformat, version 57.83.100
+-- Checking for module 'libavcodec'
+--   Found libavcodec, version 57.107.100
+-- Checking for module 'libavutil'
+--   Found libavutil, version 55.78.100
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.7.4
+-- Checking for module 'yaml-0.1'
+--   Found yaml-0.1, version 0.1.7
+-- Checking for module 'libzip'
+--   Found libzip, version 1.1.2
+-- Gazebo version: 9.0
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Found Boost: /usr/include (found version "1.65.1") found components:  thread chrono system date_time atomic 
+-- +++ processing catkin package: 'joint_limits_interface'
+-- ==> add_subdirectory(ros_control-melodic-devel/joint_limits_interface)
+-- +++ processing catkin package: 'gazebo_ros_control'
+-- ==> add_subdirectory(gazebo_ros_pkgs-melodic-devel/gazebo_ros_control)
+-- Found Boost: /usr/include (found suitable version "1.65.1", minimum required is "1.40.0") found components:  thread signals system filesystem program_options regex iostreams date_time chrono atomic 
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.0.0") 
+-- Found Boost: /usr/include (found version "1.65.1")  
+-- Looking for OGRE...
+-- Found Ogre Ghadamon (1.9.0)
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.0.0", minimum required is "2.3.0") 
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq , version 4.2.5
+-- Checking for module 'uuid'
+--   Found uuid, version 2.31.1
+-- Found UUID: TRUE  
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 6.0.0
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- FreeImage.pc not found, we will search for FreeImage_INCLUDE_DIRS and FreeImage_LIBRARIES
+-- Found UUID: TRUE  
+-- Checking for module 'gts'
+--   Found gts, version 0.7.6
+-- Checking for module 'libswscale'
+--   Found libswscale, version 4.8.100
+-- Checking for module 'libavdevice >= 56.4.100'
+--   Found libavdevice , version 57.10.100
+-- Checking for module 'libavformat'
+--   Found libavformat, version 57.83.100
+-- Checking for module 'libavcodec'
+--   Found libavcodec, version 57.107.100
+-- Checking for module 'libavutil'
+--   Found libavutil, version 55.78.100
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.7.4
+-- Checking for module 'yaml-0.1'
+--   Found yaml-0.1, version 0.1.7
+-- Checking for module 'libzip'
+--   Found libzip, version 1.1.2
+-- Gazebo version: 9.0
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'urg_node'
+-- ==> add_subdirectory(urg_node-indigo-devel)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- urg_node: 1 messages, 0 services
+-- +++ processing catkin package: 'nav_car'
+-- ==> add_subdirectory(nav_car)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'mrobot_gazebo'
+-- ==> add_subdirectory(mrobot_gazebo)
+-- +++ processing catkin package: 'turtlebot3_description'
+-- ==> add_subdirectory(turtlebot3-melodic-devel/turtlebot3_description)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sjtuwhl/ROBOTLAB_WS/devel

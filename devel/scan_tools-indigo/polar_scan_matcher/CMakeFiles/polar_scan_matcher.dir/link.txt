@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libpolar_scan_matcher.so -o ../../lib/libpolar_scan_matcher.so CMakeFiles/polar_scan_matcher.dir/src/polar_match.cpp.o 

@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/devel
+
+Name: agv_model
+Description: Description of agv_model
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/devel/lib 
+Requires: 

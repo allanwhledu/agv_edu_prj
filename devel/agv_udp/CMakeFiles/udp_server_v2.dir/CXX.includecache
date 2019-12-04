@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sjtuwhl/ROBOTLAB_WS/src/agv_udp/src/udp_server_v2.cpp
+unistd.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+string.h
+-
+stdio.h
+/home/sjtuwhl/ROBOTLAB_WS/src/agv_udp/src/stdio.h
+pthread.h
+/home/sjtuwhl/ROBOTLAB_WS/src/agv_udp/src/pthread.h
+stdlib.h
+/home/sjtuwhl/ROBOTLAB_WS/src/agv_udp/src/stdlib.h
+errno.h
+-
+iostream
+-
+

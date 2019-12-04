@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/devel
+
+Name: mrobot_gazebo
+Description: Description of mrobot_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/devel/lib 
+Requires: 

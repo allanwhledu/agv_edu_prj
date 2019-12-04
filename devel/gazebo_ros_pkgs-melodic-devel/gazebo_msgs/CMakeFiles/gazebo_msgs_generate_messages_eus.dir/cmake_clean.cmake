@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "../../share/roseus/ros/gazebo_msgs/manifest.l"
+  "../../share/roseus/ros/gazebo_msgs/msg/ContactState.l"
+  "../../share/roseus/ros/gazebo_msgs/msg/ContactsState.l"
+  "../../share/roseus/ros/gazebo_msgs/msg/LinkState.l"
+  "../../share/roseus/ros/gazebo_msgs/msg/LinkStates.l"
+  "../../share/roseus/ros/gazebo_msgs/msg/ModelState.l"
+  "../../share/roseus/ros/gazebo_msgs/msg/ModelStates.l"
+  "../../share/roseus/ros/gazebo_msgs/msg/ODEJointProperties.l"
+  "../../share/roseus/ros/gazebo_msgs/msg/ODEPhysics.l"
+  "../../share/roseus/ros/gazebo_msgs/msg/WorldState.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/ApplyBodyWrench.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/ApplyJointEffort.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/BodyRequest.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/DeleteLight.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/DeleteModel.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/GetJointProperties.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/GetLightProperties.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/GetLinkProperties.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/GetLinkState.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/GetModelProperties.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/GetModelState.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/GetPhysicsProperties.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/GetWorldProperties.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/JointRequest.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/SetJointProperties.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/SetJointTrajectory.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/SetLightProperties.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/SetLinkProperties.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/SetLinkState.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/SetModelConfiguration.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/SetModelState.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/SetPhysicsProperties.l"
+  "../../share/roseus/ros/gazebo_msgs/srv/SpawnModel.l"
+  "CMakeFiles/gazebo_msgs_generate_messages_eus"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/gazebo_msgs_generate_messages_eus.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

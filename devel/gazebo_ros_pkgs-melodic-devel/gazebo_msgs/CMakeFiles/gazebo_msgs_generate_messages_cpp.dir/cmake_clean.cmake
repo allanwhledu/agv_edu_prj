@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "../../include/gazebo_msgs/ApplyBodyWrench.h"
+  "../../include/gazebo_msgs/ApplyJointEffort.h"
+  "../../include/gazebo_msgs/BodyRequest.h"
+  "../../include/gazebo_msgs/ContactState.h"
+  "../../include/gazebo_msgs/ContactsState.h"
+  "../../include/gazebo_msgs/DeleteLight.h"
+  "../../include/gazebo_msgs/DeleteModel.h"
+  "../../include/gazebo_msgs/GetJointProperties.h"
+  "../../include/gazebo_msgs/GetLightProperties.h"
+  "../../include/gazebo_msgs/GetLinkProperties.h"
+  "../../include/gazebo_msgs/GetLinkState.h"
+  "../../include/gazebo_msgs/GetModelProperties.h"
+  "../../include/gazebo_msgs/GetModelState.h"
+  "../../include/gazebo_msgs/GetPhysicsProperties.h"
+  "../../include/gazebo_msgs/GetWorldProperties.h"
+  "../../include/gazebo_msgs/JointRequest.h"
+  "../../include/gazebo_msgs/LinkState.h"
+  "../../include/gazebo_msgs/LinkStates.h"
+  "../../include/gazebo_msgs/ModelState.h"
+  "../../include/gazebo_msgs/ModelStates.h"
+  "../../include/gazebo_msgs/ODEJointProperties.h"
+  "../../include/gazebo_msgs/ODEPhysics.h"
+  "../../include/gazebo_msgs/SetJointProperties.h"
+  "../../include/gazebo_msgs/SetJointTrajectory.h"
+  "../../include/gazebo_msgs/SetLightProperties.h"
+  "../../include/gazebo_msgs/SetLinkProperties.h"
+  "../../include/gazebo_msgs/SetLinkState.h"
+  "../../include/gazebo_msgs/SetModelConfiguration.h"
+  "../../include/gazebo_msgs/SetModelState.h"
+  "../../include/gazebo_msgs/SetPhysicsProperties.h"
+  "../../include/gazebo_msgs/SpawnModel.h"
+  "../../include/gazebo_msgs/WorldState.h"
+  "CMakeFiles/gazebo_msgs_generate_messages_cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/gazebo_msgs_generate_messages_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

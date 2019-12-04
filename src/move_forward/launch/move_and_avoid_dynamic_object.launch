@@ -4,11 +4,15 @@
 	<param name="initial_pose_th" value="-2.42"/>
 
 	
-        <param name="target_pose_x" value="-5.389"/>
-	<param name="target_pose_y" value="0.757"/>
-	<param name="target_pose_th" value="-2.774"/>
+    <param name="target_pose_x1" value="-5.389"/>
+	<param name="target_pose_y1" value="0.757"/>
+	<param name="target_pose_th1" value="-2.774"/>
+
+	<param name="target_pose_x2" value="-5.389"/>
+    <param name="target_pose_y2" value="0.757"/>
+    <param name="target_pose_th2" value="-2.774"/>
 	
-        <node pkg="move_forward" name="move_and_avoid_dynamic_object" type="move_and_avoid_dynamic_object" output="screen">
+    <node pkg="move_forward" name="move_and_avoid_dynamic_object" type="move_and_avoid_dynamic_object" output="screen">
 	</node>	
 
 </launch>

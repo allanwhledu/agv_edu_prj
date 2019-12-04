@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/reboot_test.dir/current/samples/reboot_test.c.o  -o ../lib/urg_c/reboot_test -Wl,-rpath,/home/sjtuwhl/ROBOTLAB_WS/devel/lib: ../lib/libopen_urg_sensor.so ../lib/libliburg_c.so -lrt -lm 

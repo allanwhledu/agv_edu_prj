@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: ira_laser_tools
+Description: Description of ira_laser_tools
+Version: 1.0.0
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib 
+Requires: 

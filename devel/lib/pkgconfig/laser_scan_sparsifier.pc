@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/devel
+
+Name: laser_scan_sparsifier
+Description: Description of laser_scan_sparsifier
+Version: 0.3.2
+Cflags: -I/home/sjtuwhl/ROBOTLAB_WS/src/scan_tools-indigo/laser_scan_sparsifier/include
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/devel/lib -llaser_scan_sparsifier
+Requires: roscpp nodelet sensor_msgs

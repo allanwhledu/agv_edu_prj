@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/devel
+
+Name: controller_manager_msgs
+Description: Description of controller_manager_msgs
+Version: 0.15.1
+Cflags: -I/home/sjtuwhl/ROBOTLAB_WS/devel/include
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/devel/lib 
+Requires: std_msgs message_runtime

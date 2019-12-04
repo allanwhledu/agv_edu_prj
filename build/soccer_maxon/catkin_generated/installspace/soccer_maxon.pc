@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/install
+
+Name: soccer_maxon
+Description: Description of soccer_maxon
+Version: 0.0.0
+Cflags: -I/home/sjtuwhl/ROBOTLAB_WS/install/include
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/install/lib 
+Requires: 

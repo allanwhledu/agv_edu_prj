@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: gazebo_msgs
+Description: Description of gazebo_msgs
+Version: 2.8.5
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib 
+Requires: message_runtime std_msgs trajectory_msgs geometry_msgs sensor_msgs std_srvs

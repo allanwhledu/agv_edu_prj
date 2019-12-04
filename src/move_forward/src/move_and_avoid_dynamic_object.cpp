@@ -25,13 +25,23 @@ int main(int argc, char** argv)
     double initial_pose_x, initial_pose_y, initial_pose_th;
     double target_pose_x, target_pose_y, target_pose_th;
 
+
     ros::param::get("initial_pose_x", initial_pose_x);
     ros::param::get("initial_pose_y", initial_pose_y);
     ros::param::get("initial_pose_th", initial_pose_th);
 
-    ros::param::get("target_pose_x", target_pose_x);
-    ros::param::get("target_pose_y", target_pose_y);
-    ros::param::get("target_pose_th", target_pose_th);
+    int switch_tar = 1;
+    switch (switch_tar){
+        case 1:
+            ros::param::get("target_pose_x1", target_pose_x);
+            ros::param::get("target_pose_y1", target_pose_y);
+            ros::param::get("target_pose_th1", target_pose_th);
+        case 2:
+            ros::param::get("target_pose_x2", target_pose_x);
+            ros::param::get("target_pose_y2", target_pose_y);
+            ros::param::get("target_pose_th2", target_pose_th);
+    }
+    //todo 可以给出多个参数，然后订阅一下节点，依靠订阅消息来装入不同的参数吧
 
 //    std::cout<<initial_pose_x<<" "<<initial_pose_y<<" "<<initial_pose_th<<std::endl;
 //    std::cout<<target_pose_x<<" "<<target_pose_y<<" "<<target_pose_th<<std::endl;
@@ -53,7 +63,7 @@ int main(int argc, char** argv)
 
     int initial_time_counter = 0;
 
-
+    // 5次initial pose
     while(initial_time_counter < 5)
     {
         ros::spinOnce();
@@ -118,10 +128,7 @@ int main(int argc, char** argv)
         srv.request.action = 2;
         client_1.call(srv);
     }
-
-
-
-
+    // call只执行了一次
 
 return 0;
 

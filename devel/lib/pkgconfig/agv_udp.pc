@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/devel
+
+Name: agv_udp
+Description: Description of agv_udp
+Version: 0.0.0
+Cflags: -I/home/sjtuwhl/ROBOTLAB_WS/devel/include
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/devel/lib 
+Requires: message_runtime

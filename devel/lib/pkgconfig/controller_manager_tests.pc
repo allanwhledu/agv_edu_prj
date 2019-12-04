@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/devel
+
+Name: controller_manager_tests
+Description: Description of controller_manager_tests
+Version: 0.15.1
+Cflags: -I/home/sjtuwhl/ROBOTLAB_WS/src/ros_control-melodic-devel/controller_manager_tests/include
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/devel/lib -lcontroller_manager_tests
+Requires: controller_manager controller_interface

@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/devel
+
+Name: laser_ortho_projector
+Description: Description of laser_ortho_projector
+Version: 0.3.2
+Cflags: -I/home/sjtuwhl/ROBOTLAB_WS/src/scan_tools-indigo/laser_ortho_projector/include
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/devel/lib -llaser_ortho_projector
+Requires: roscpp nodelet sensor_msgs tf pcl_ros pcl_conversions geometry_msgs message_filters

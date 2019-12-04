@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/gazebo_msgs_generate_messages_lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/msg/ODEJointProperties.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/msg/ContactState.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/msg/WorldState.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/msg/ODEPhysics.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/msg/LinkStates.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/msg/ContactsState.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/msg/ModelState.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/msg/ModelStates.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/msg/LinkState.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/SetJointTrajectory.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/GetWorldProperties.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/BodyRequest.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/DeleteModel.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/GetLinkState.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/GetModelState.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/SpawnModel.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/SetLinkState.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/SetModelState.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/ApplyJointEffort.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/SetJointProperties.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/ApplyBodyWrench.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/SetLightProperties.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/GetJointProperties.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/SetLinkProperties.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/GetPhysicsProperties.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/GetLightProperties.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/SetPhysicsProperties.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/GetModelProperties.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/JointRequest.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/GetLinkProperties.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/DeleteLight.lisp"
+  "/home/sjtuwhl/ROBOTLAB_WS/devel/share/common-lisp/ros/gazebo_msgs/srv/SetModelConfiguration.lisp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

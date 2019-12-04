@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/devel
+
+Name: ur_driver
+Description: Description of ur_driver
+Version: 1.2.7
+Cflags: -I/home/sjtuwhl/ROBOTLAB_WS/devel/include
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/devel/lib 
+Requires: dynamic_reconfigure

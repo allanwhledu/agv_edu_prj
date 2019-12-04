@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/devel
+
+Name: urg_c
+Description: Description of urg_c
+Version: 1.0.405
+Cflags: -I/home/sjtuwhl/ROBOTLAB_WS/src/urg_c-master/current/include
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/devel/lib -lliburg_c
+Requires: 

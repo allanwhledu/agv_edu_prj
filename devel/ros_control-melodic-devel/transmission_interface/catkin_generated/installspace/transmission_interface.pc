@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: transmission_interface
+Description: Description of transmission_interface
+Version: 0.15.1
+Cflags: -I/usr/local/include -I/usr/include
+Libs: -L/usr/local/lib -ltransmission_interface_parser -ltransmission_interface_loader -ltransmission_interface_loader_plugins /usr/lib/x86_64-linux-gnu/libtinyxml.so
+Requires: pluginlib roscpp

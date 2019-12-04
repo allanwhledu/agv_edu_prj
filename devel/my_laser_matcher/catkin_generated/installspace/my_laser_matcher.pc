@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: my_laser_matcher
+Description: Description of my_laser_matcher
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/sensor_parameter.dir/current/samples/sensor_parameter.c.o  -o ../lib/urg_c/sensor_parameter -Wl,-rpath,/home/sjtuwhl/ROBOTLAB_WS/devel/lib: ../lib/libopen_urg_sensor.so ../lib/libliburg_c.so -lrt -lm 

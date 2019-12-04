@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/timeout_test.dir/current/samples/timeout_test.c.o  -o ../lib/urg_c/timeout_test -Wl,-rpath,/home/sjtuwhl/ROBOTLAB_WS/devel/lib: ../lib/libopen_urg_sensor.so ../lib/libliburg_c.so -lrt -lm 

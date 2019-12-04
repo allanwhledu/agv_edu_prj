@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "../../lib/python2.7/dist-packages/gazebo_msgs/msg/_ContactState.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/msg/_ContactsState.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/msg/_LinkState.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/msg/_LinkStates.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/msg/_ModelState.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/msg/_ModelStates.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/msg/_ODEJointProperties.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/msg/_ODEPhysics.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/msg/_WorldState.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/msg/__init__.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_ApplyBodyWrench.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_ApplyJointEffort.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_BodyRequest.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_DeleteLight.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_DeleteModel.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_GetJointProperties.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_GetLightProperties.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_GetLinkProperties.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_GetLinkState.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_GetModelProperties.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_GetModelState.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_GetPhysicsProperties.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_GetWorldProperties.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_JointRequest.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_SetJointProperties.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_SetJointTrajectory.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_SetLightProperties.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_SetLinkProperties.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_SetLinkState.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_SetModelConfiguration.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_SetModelState.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_SetPhysicsProperties.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/_SpawnModel.py"
+  "../../lib/python2.7/dist-packages/gazebo_msgs/srv/__init__.py"
+  "CMakeFiles/gazebo_msgs_generate_messages_py"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/gazebo_msgs_generate_messages_py.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

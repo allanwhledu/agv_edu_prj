@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "../../share/common-lisp/ros/gazebo_msgs/msg/ContactState.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/msg/ContactsState.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/msg/LinkState.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/msg/LinkStates.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/msg/ModelState.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/msg/ModelStates.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/msg/ODEJointProperties.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/msg/ODEPhysics.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/msg/WorldState.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/ApplyBodyWrench.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/ApplyJointEffort.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/BodyRequest.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/DeleteLight.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/DeleteModel.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/GetJointProperties.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/GetLightProperties.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/GetLinkProperties.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/GetLinkState.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/GetModelProperties.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/GetModelState.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/GetPhysicsProperties.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/GetWorldProperties.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/JointRequest.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/SetJointProperties.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/SetJointTrajectory.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/SetLightProperties.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/SetLinkProperties.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/SetLinkState.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/SetModelConfiguration.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/SetModelState.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/SetPhysicsProperties.lisp"
+  "../../share/common-lisp/ros/gazebo_msgs/srv/SpawnModel.lisp"
+  "CMakeFiles/gazebo_msgs_generate_messages_lisp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/gazebo_msgs_generate_messages_lisp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

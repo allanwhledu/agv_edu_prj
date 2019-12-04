@@ -1,0 +1,8 @@
+prefix=/home/sjtuwhl/ROBOTLAB_WS/install
+
+Name: turtlebot3_slam
+Description: Description of turtlebot3_slam
+Version: 1.2.2
+Cflags: -I/home/sjtuwhl/ROBOTLAB_WS/install/include
+Libs: -L/home/sjtuwhl/ROBOTLAB_WS/install/lib 
+Requires: roscpp sensor_msgs

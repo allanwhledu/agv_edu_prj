@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: controller_manager_tests
+Description: Description of controller_manager_tests
+Version: 0.15.1
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib -lcontroller_manager_tests
+Requires: controller_manager controller_interface

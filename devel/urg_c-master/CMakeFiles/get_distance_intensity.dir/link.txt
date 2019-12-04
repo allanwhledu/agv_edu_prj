@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/get_distance_intensity.dir/current/samples/get_distance_intensity.c.o  -o ../lib/urg_c/get_distance_intensity -Wl,-rpath,/home/sjtuwhl/ROBOTLAB_WS/devel/lib: ../lib/libopen_urg_sensor.so ../lib/libliburg_c.so -lrt -lm 

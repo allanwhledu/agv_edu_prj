@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "../../share/gennodejs/ros/gazebo_msgs/msg/ContactState.js"
+  "../../share/gennodejs/ros/gazebo_msgs/msg/ContactsState.js"
+  "../../share/gennodejs/ros/gazebo_msgs/msg/LinkState.js"
+  "../../share/gennodejs/ros/gazebo_msgs/msg/LinkStates.js"
+  "../../share/gennodejs/ros/gazebo_msgs/msg/ModelState.js"
+  "../../share/gennodejs/ros/gazebo_msgs/msg/ModelStates.js"
+  "../../share/gennodejs/ros/gazebo_msgs/msg/ODEJointProperties.js"
+  "../../share/gennodejs/ros/gazebo_msgs/msg/ODEPhysics.js"
+  "../../share/gennodejs/ros/gazebo_msgs/msg/WorldState.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/ApplyBodyWrench.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/ApplyJointEffort.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/BodyRequest.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/DeleteLight.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/DeleteModel.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/GetJointProperties.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/GetLightProperties.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/GetLinkProperties.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/GetLinkState.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/GetModelProperties.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/GetModelState.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/GetPhysicsProperties.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/GetWorldProperties.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/JointRequest.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/SetJointProperties.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/SetJointTrajectory.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/SetLightProperties.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/SetLinkProperties.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/SetLinkState.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/SetModelConfiguration.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/SetModelState.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/SetPhysicsProperties.js"
+  "../../share/gennodejs/ros/gazebo_msgs/srv/SpawnModel.js"
+  "CMakeFiles/gazebo_msgs_generate_messages_nodejs"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
